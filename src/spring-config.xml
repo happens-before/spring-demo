@@ -4,6 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="helloWorld" class="com.xupt.edu.spring.demo.HelloWorld">
         <property name="name" value="spring"></property>
-
     </bean>
+    <bean id="office" class="com.xupt.edu.spring.demo.Office">
+        <property name="name" value="office1"></property>
+        <property name="boss" ref="boss"></property>
+    </bean>
+    <bean id="boss" class="com.xupt.edu.spring.demo.Boss">
+        <property name="name" value="zhaowanyue"></property>
+        <property name="office" ref="office"></property>
+        <!--<constructor-arg index="0" value="Liweiwei"></constructor-arg>-->
+        <!--<constructor-arg index="1" ref="office"></constructor-arg>-->
+    </bean>
+
 </beans>
